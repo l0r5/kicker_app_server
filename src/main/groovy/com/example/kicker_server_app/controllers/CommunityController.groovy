@@ -15,13 +15,13 @@ class CommunityController {
     private final Community community = new Community()
     private final logger = Logger.getLogger('')
 
-    @RequestMapping("/community")
+    @RequestMapping("/api/community")
     List<String> community(@RequestParam(value = "usersOnline", defaultValue = "HelloWorldUser") List<String> usersOnline) {
         logger.info("Community -> usersOnline: ${community.usersOnline.toString()}")
         return community.usersOnline
     }
 
-    @RequestMapping(value = "/community/addOnlineUser", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/community/addOnlineUser", method = RequestMethod.POST)
     @ResponseBody
     List<String> addOnlineUser(String user) {
         community.addOnlineUser(user)
@@ -29,7 +29,7 @@ class CommunityController {
         return community.usersOnline
     }
 
-    @RequestMapping(value = "/community/removeOnlineUser", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/community/removeOnlineUser", method = RequestMethod.POST)
     @ResponseBody
     List<String> removeOnlineUser(String user) {
         community.removeOnlineUser(user)

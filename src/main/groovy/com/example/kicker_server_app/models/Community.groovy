@@ -7,7 +7,7 @@ class Community {
 
     Community() {
         this.id = id
-        this.usersOnline = ['HelloWorldUser']
+        this.usersOnline = ['DummyUser']
     }
 
     List<String> getUsersOnline() {
