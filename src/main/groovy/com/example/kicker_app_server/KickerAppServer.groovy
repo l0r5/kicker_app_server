@@ -1,11 +1,11 @@
-package com.example.kicker_server_app
+package com.example.kicker_app_server
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class KickerServerApp {
+class KickerAppServer {
 	static void main(String[] args) {
-		SpringApplication.run(KickerServerApp, args)
+		SpringApplication.run(KickerAppServer, args)
 	}
 }

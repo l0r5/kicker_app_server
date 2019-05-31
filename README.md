@@ -1,2 +1,2 @@
-# kicker_server_app
+# kicker_app_server
 SpringBoot App to handle KickerApp Requests

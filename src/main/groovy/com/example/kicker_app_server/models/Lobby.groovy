@@ -1,11 +1,11 @@
-package com.example.kicker_server_app.models
+package com.example.kicker_app_server.models
 
-class Community {
+class Lobby {
 
     private final long id
     private final List<String> usersOnline
 
-    Community() {
+    Lobby() {
         this.id = id
         this.usersOnline = ['DummyUser']
     }
