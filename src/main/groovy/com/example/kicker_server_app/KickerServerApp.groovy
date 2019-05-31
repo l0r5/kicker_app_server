@@ -4,10 +4,8 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class KickerServerAppApplication {
-
+class KickerServerApp {
 	static void main(String[] args) {
-		SpringApplication.run(KickerServerAppApplication, args)
+		SpringApplication.run(KickerServerApp, args)
 	}
-
 }
