@@ -17,7 +17,7 @@ class LobbyController {
     private final logger = Logger.getLogger('')
 
     @RequestMapping("/api/lobby")
-    List<String> community(@RequestParam(value = "usersOnline", defaultValue = "HelloWorldUser") List<String> usersOnline) {
+    List<String> community(@RequestParam(value = "usersOnline", defaultValue = "") List<String> usersOnline) {
         logger.info("Lobby -> usersOnline: ${lobby.usersOnline.toString()}")
         return lobby.usersOnline
     }
