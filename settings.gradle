@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'kicker_server_app'
+rootProject.name = 'kicker_app_server'

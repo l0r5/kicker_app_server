@@ -1,4 +1,4 @@
-package com.example.kicker_server_app
+package com.example.kicker_app_server
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner)
 @SpringBootTest
-class KickerServerAppApplicationTests {
+class KickerAppServerTests {
 
 	@Test
 	void contextLoads() {
