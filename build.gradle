@@ -1,6 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '2.1.5.RELEASE'
     id 'groovy'
+    id 'com.palantir.docker' version '0.22.1'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -18,4 +19,9 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy'
     implementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+docker {
+    dependsOn build
+    files bootJar.archiveFileName
 }

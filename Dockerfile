@@ -1,18 +1,15 @@
 FROM openjdk:8-jdk-alpine
-#
 
-#RUN wget -q https://services.gradle.org/distributions/gradle-5.4.1-bin.zip \
-#    && unzip gradle-5.4.1-bin.zip -d /opt \
-#    && rm gradle-5.4.1-bin.zip
-#
-#ENV GRADLE_HOME /opt/gradle-5.4.1
-#ENV PATH $PATH:/opt/gradle-5.4.1/bin
+#install git
+RUN apk add --no-cache git
 
-COPY quickstart.sh /
-CMD ["/quickstart.sh"]
-#
-#VOLUME /tmp
-#ARG JAR_FILE
-#WORKDIR /kicker_app_server
-#COPY build/libs/*.jar app.jar
-#ENTRYPOINT ["java","-jar","/app.jar"]
+RUN git clone https://github.com/l0r5/kicker_app_server.git
+
+WORKDIR "/kicker_app_server/"
+RUN ./gradlew build bootJar
+# check if kicker_app_server_$version.jar is available
+RUN ls build/libs
+
+# copy build jar and run webserver
+RUN cp build/libs/*.jar ./app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
